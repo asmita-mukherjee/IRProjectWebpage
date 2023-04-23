@@ -9,8 +9,8 @@ majority_l = {}
 
 def predict(head, text):
     print("Generating links")
-    # link_list = search_bing(head)
-    link_list = take_text(head)
+    link_list = search_bing(head)
+    #link_list = take_text(head)
     if not link_list:
         print("Links are empty : ", link_list)
         return -1, -1, -1
