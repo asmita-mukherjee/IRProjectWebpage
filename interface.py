@@ -6,6 +6,9 @@ from predict import predict
 import base64
 import logging
 
+import nltk
+nltk.download("all")
+
 def add_bg_from_local(image_file):
     with open(image_file, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
