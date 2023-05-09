@@ -4,7 +4,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from predict import predict
 import base64
-
+import logging
 
 def add_bg_from_local(image_file):
     with open(image_file, "rb") as image_file:
@@ -87,7 +87,7 @@ try:
 
 except Exception as e:
 
-    print(e)
+    st.error(e)
     st.markdown("\n")
     st.markdown("<h3 style='text-align: center; color: grey;'>Something went wrong !!!</h3>",
                 unsafe_allow_html=True)
