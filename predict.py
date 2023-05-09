@@ -6,7 +6,7 @@ import streamlit as st
 ques_ans = {}
 majority_l = {}
 
-@st.cache_data
+
 def predict(head, text):
     print("Generating links")
     link_list = search_bing(head)
