@@ -308,14 +308,14 @@ SUPPORTED_TASKS = {
     "question-generation": {
         "impl": QGPipeline,
         "default": {
-            "model": "question-answer-generation",
+            "model": "question-answer-generation/",
             "ans_model": "question-answer-generation",
         }
     },
     "multitask-qa-qg": {
         "impl": MultiTaskQAQGPipeline,
         "default": {
-            "model": "question-answer-generation",
+            "model": "question-answer-generation/",
         }
     },
     "e2e-qg": {
