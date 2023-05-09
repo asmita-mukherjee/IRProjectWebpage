@@ -13,6 +13,8 @@ from transformers import(
     PreTrainedTokenizer,
 )
 
+import streamlit as st
+
 logger = logging.getLogger(__name__)
 
 class QGPipeline:
@@ -315,7 +317,7 @@ SUPPORTED_TASKS = {
     "multitask-qa-qg": {
         "impl": MultiTaskQAQGPipeline,
         "default": {
-            "model": "abhitopia/question-answer-generation",
+                    "model": "abhitopia/question-answer-generation",
         }
     },
     "e2e-qg": {
@@ -325,7 +327,7 @@ SUPPORTED_TASKS = {
         }
     }
 }
-
+@st.cache(allow_output_mutation=True)
 def pipeline(
     task: str,
     model: Optional = None,

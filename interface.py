@@ -6,8 +6,16 @@ from predict import predict
 import base64
 import logging
 
+from transformers import(
+    AutoModelForSeq2SeqLM,
+    AutoTokenizer,
+    PreTrainedModel,
+    PreTrainedTokenizer,
+)
+
 import nltk
 nltk.download('punkt')
+
 
 def add_bg_from_local(image_file):
     with open(image_file, "rb") as image_file:
