@@ -7,7 +7,7 @@ import base64
 import logging
 
 import nltk
-nltk.download('Punkt')
+nltk.download('punkt')
 
 def add_bg_from_local(image_file):
     with open(image_file, "rb") as image_file:
