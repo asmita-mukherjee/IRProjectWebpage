@@ -1,12 +1,12 @@
 from metrics import sbertSimilarity, matching_score, sentence_bleu_score
 from ques_ans_pipeline import pipeline
 from methods import take_text, query_search_text, getMajority, get_answers, importf, search_bing
-
+import streamlit as st
 
 ques_ans = {}
 majority_l = {}
 
-
+@st.cache_data
 def predict(head, text):
     print("Generating links")
     link_list = search_bing(head)
